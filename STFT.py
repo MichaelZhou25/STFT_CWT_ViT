@@ -107,16 +107,18 @@ print("STFT final shape:", stft_final.shape)       # e.g. (B=298, C*F_0_50=627, 
 # ------------------------------------------------------------
 # 4. Visualize STFT for First Channel, First Epoch
 # ------------------------------------------------------------
-amp0 = stft_final[0].cpu().numpy()                # (C*F_0_50, T_new)
+amp0 = stft_final[0].cpu().numpy()  # (C*F_0_50, T_new)
+amp0_db = 20 * np.log10(amp0 + 1e-6)
 times = torch.arange(T_new) * hop_length / sfreq
 
 plt.figure(figsize=(6, 4))
-plt.pcolormesh(times, np.arange(C*F_0_50), amp0, shading='gouraud', cmap='jet')
-plt.colorbar(label='Amplitude')
+plt.pcolormesh(times, np.arange(C*F_0_50), amp0_db, shading='gouraud', cmap='jet')
+plt.colorbar(label='Amplitude (dB)')
 plt.title('STFT (torch) - First electrode, first epoch')
 plt.ylabel('Frequency (Hz)')
 plt.xlabel('Time (s)')
 plt.tight_layout()
 plt.show()
+
 
 
