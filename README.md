@@ -2,7 +2,7 @@ Dataset
 
 The dataset infomation is here:
 https://openneuro.org/datasets/ds004504/versions/1.0.7 
-(note that I used the preprocessed ones)
+(note that I used the preprocessed ones and they are here: https://drive.google.com/drive/folders/1bxo1KJkriY7yR_oYzMOY4DNFohjNegAF?usp=sharing)
 
 Detailed info:
 
