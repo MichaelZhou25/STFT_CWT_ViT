@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 # 1. Load EEG Data
 # ------------------------------------------------------------
 raw = mne.io.read_raw_eeglab(
-    r'derivatives\sub-001\eeg\sub-001_task-eyesclosed_eeg.set',
+    r'derivatives\sub-087\eeg\sub-087_task-eyesclosed_eeg.set',
     preload=True
 )
 data  = raw.get_data()        # (n_channels, n_timepoints)
